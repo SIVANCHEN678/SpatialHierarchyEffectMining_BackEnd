@@ -1,0 +1,130 @@
+logging:
+  level:
+    com.edu.cqupt.shemining : debug
+    web: debug
+
+spring:
+  datasource:
+    url: jdbc:postgresql://10.16.48.219:5432/software8
+    username: pg
+    password: 111111
+    driver-class-name: org.postgresql.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#servlet:
+#  multipart:
+#    enabled: true # 开启文件上传
+#    file-size-threshold: 2KB # 文件写入磁盘的阈值
+#    max-file-size: 100MB
+#    max-request-size: 215MB # 最大请求值大小
+
+gorit:
+  file:
+    root:
+          path1: E:/07_MedAIProject/software8/01_BackEnd/SHEMiningV2.0/src/main/resources/pycausal/
+          path2: E:/07_MedAIProject/software8/01_BackEnd/SHEMiningV2.0/src/main/resources/file/results/
+          path3: E:/07_MedAIProject/software8/01_BackEnd/SHEMiningV2.0/src/main/resources/pycausal/algorithmRun_V2.0.py
+          path4: E:/07_MedAIProject/software8/01_BackEnd/SHEMiningV2.0/src/main/resources/pycausal/algorithmRun_V2.0_without.py
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations:
+    classpath: src/main/resources/com.edu.cqupt.shemining.mapper/*.xml
+
+server:
+  port: 8088
+
+application:
+  python:
+   environment: E:\01_App\05_enviroment\annoconda\envs\she\python.exe
+    #environment: D:\tools\annoconda\envs\ccd\python.exe
+
+#    private String environment = "C:\\ProgramData\\Anaconda3\\envs\\88\\python.exe";
+#swagger:
+#  enabled: true
+
+#pagehelper:
+#  helperDialect: postgresql  # 设置数据库类型为PostgreSQL
+#  reasonable: true      # 分页合理化参数，默认值为 false，设置为 true 后，如果 pageNum 小于 1，则自动设置为 1，如果 pageNum 大于总页数，则自动设置为最后一页
+#  supportMethodsArguments: true  # 支持通过 Mapper 方法参数来传递分页参数，默认值为 false
+file:
+  path: src/main/resources/Files
+resources:
+    static-locations: >
+
+      file:${file.path}
+
+
+#logging:
+#  level:
+#    com.edu.cqupt.shemining : debug
+#    web: debug
+#
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://schh.work:2208/software8
+#    username: postgres
+#    password: 111111
+#    driver-class-name: org.postgresql.Driver
+#
+##servlet:
+##  multipart:
+##    enabled: true # 开启文件上传
+##    file-size-threshold: 2KB # 文件写入磁盘的阈值
+##    max-file-size: 100MB
+##    max-request-size: 215MB # 最大请求值大小
+#
+#gorit:
+#  file:
+#    root:
+#      #          path1: C:/Users/pc/Desktop/SHEMiningV3.0_5.11/src/main/resources/pycausal/
+#      #          path2: C:/Users/pc/Desktop/SHEMiningV3.0_5.11/src/main/resources/file/results/
+#      #          path3: C:/Users/pc/Desktop/SHEMiningV3.0_5.11/src/main/resources/pycausal/algorithmRun_V2.0.py
+#      #          path4: C:/Users/pc/Desktop/SHEMiningV3.0_5.11/src/main/resources/pycausal/algorithmRun_V2.0_without.py
+#
+##      path1: H:/software8/V3.0/01_BackEnd/SHEMiningV3.0_4.24/src/main/resources/pycausal/
+##      path2: H:/software8/V3.0/01_BackEnd/SHEMiningV3.0_4.24/src/main/resources/file/results/
+##      path3: H:/software8/V3.0/01_BackEnd/SHEMiningV3.0_4.24/src/main/resources/pycausal/algorithmRun_V2.0.py
+##      path4: H:/software8/V3.0/01_BackEnd/SHEMiningV3.0_4.24/src/main/resources/pycausal/algorithmRun_V2.0_without.py
+#
+#        path1: /home/data/WorkSpace/Backend/software8/pycausal/
+#        path2: /home/data/WorkSpace/Backend/software8/results/
+#        path3: /home/data/WorkSpace/Backend/software8/pycausal/algorithmRun_V2.0.py
+#        path4: /home/data/WorkSpace/Backend/software8/pycausal/algorithmRun_V2.0_without.py
+#
+##           path1: //src/main/resources/pycausal/
+##           path2: //src/main/resources/file/results/
+##           path3: //src/main/resources/pycausal/algorithmRun_V2.0.py
+##           path4: //src/main/resources/pycausal/algorithmRun_V2.0_without.py
+#
+#
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations:
+#    classpath: src/main/resources/com.edu.cqupt.shemining.mapper/*.xml
+#
+#server:
+#  port: 8088
+#
+#application:
+#  python:
+#    environment: /home/cqupt/anaconda3/envs/software81/bin/python
+##    environment: D:\tools\annoconda\envs\ccd\python.exe
+#
+##    private String environment = "C:\\ProgramData\\Anaconda3\\envs\\88\\python.exe";
+##swagger:
+##  enabled: true
+#
+#pagehelper:
+#  helperDialect: postgresql  # 设置数据库类型为PostgreSQL
+#  reasonable: true      # 分页合理化参数，默认值为 false，设置为 true 后，如果 pageNum 小于 1，则自动设置为 1，如果 pageNum 大于总页数，则自动设置为最后一页
+#  supportMethodsArguments: true  # 支持通过 Mapper 方法参数来传递分页参数，默认值为 false
+#file:
+#  path: src/main/resources/Files
+#resources:
+#  static-locations: >
+#
+#    file:${file.path}

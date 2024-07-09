@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.edu.cqupt.shemining.mapper.TableMapper" >
+    <select id="getColumnName" resultType="java.lang.String">
+        select COLUMN_NAME from information_schema.COLUMNS where table_name = #{tableName};
+    </select>
+    <select id="getInfoByTableName" resultType="java.util.Map">
+        select  * from ${tableName}
+
+    </select>
+
+    <select id="getDiseaseDict" resultType="java.lang.Integer">
+        select id from disease;
+    </select>
+</mapper>

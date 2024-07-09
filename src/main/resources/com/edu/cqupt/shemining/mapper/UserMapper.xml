@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.edu.cqupt.shemining.mapper.UserMapper" >
+    <update id="updateByname">
+        UPDATE "user"
+        SET password = #{newpassword}
+        WHERE user_name = #{username}
+    </update>
+
+
+    <resultMap id="BaseResultMap" type="com.edu.cqupt.shemining.model.User">
+
+        <id property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="role" column="role" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,username,
+        password,role,create_time,
+        update_time
+    </sql>
+
+    <select id="queryByUername" resultType="com.edu.cqupt.shemining.model.User">
+        SELECT * FROM user WHERE user_name = #{username};
+    </select>
+
+
+    <!--     下面方法是管理员端-数据管理新增-->
+    <update id="addTableSize">
+        update "user"  set upload_size = upload_size + ${tableSize} where uid = #{uid}
+    </update>
+
+    <update id="minusTableSize">
+        update "user"  set upload_size = upload_size - ${tableSize} where uid = #{uid}
+    </update>
+
+    <!--  User selectByUid(String uid); -->
+    <select id="selectByUid" resultType="com.edu.cqupt.shemining.model.User">
+        select * from user where uid = #{uid}
+    </select>
+</mapper>

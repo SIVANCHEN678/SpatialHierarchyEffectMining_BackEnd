@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.cqupt.shemining.mapper.NoticeMapper">
+    <update id="saveNotification">
+
+        INSERT INTO notification (uid, user_name, title, content , create_time, update_time)
+        VALUES (${uid},'${userName}','${title}','${content}',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
+
+    </update>
+
+
+    <select id="selectAllNotices" resultType="com.edu.cqupt.shemining.model.Notification">
+            SELECT * FROM notification
+    </select>
+</mapper>

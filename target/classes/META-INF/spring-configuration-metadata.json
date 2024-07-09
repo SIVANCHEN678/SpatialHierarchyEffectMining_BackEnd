@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "application.python",
+      "type": "com.edu.cqupt.shemining.util.PythonRun",
+      "sourceType": "com.edu.cqupt.shemining.config.ApplicationConfig",
+      "sourceMethod": "getPythonRunBean()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.python.auto-remove-cache",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.edu.cqupt.shemining.util.PythonRun"
+    },
+    {
+      "name": "application.python.cache",
+      "type": "java.lang.String",
+      "sourceType": "com.edu.cqupt.shemining.util.PythonRun"
+    },
+    {
+      "name": "application.python.environment",
+      "type": "java.lang.String",
+      "sourceType": "com.edu.cqupt.shemining.util.PythonRun"
+    },
+    {
+      "name": "application.python.root",
+      "type": "java.lang.String",
+      "sourceType": "com.edu.cqupt.shemining.util.PythonRun"
+    }
+  ],
+  "hints": []
+}

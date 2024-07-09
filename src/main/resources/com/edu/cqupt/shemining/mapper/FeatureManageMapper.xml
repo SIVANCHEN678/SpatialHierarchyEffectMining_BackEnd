@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.cqupt.shemining.mapper.FeatureManageMapper">
+
+
+    <select id="selectFeatures" resultType="com.edu.cqupt.shemining.model.FeatureEntity">
+        select * from field_management where ${belongType}=true;
+    </select>
+
+    <select id="getUserFeatureList" resultType="java.lang.String">
+        SELECT column_name
+        FROM information_schema.columns
+        WHERE  table_name = #{tablename};
+    </select>
+
+
+
+
+
+</mapper>
